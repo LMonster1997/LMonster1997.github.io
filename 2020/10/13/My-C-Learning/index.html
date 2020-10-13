@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="1 初识程序1.1 Hello World12345678int main()&amp;#123;	cout &lt;&lt; &quot;hello world!!!&quot; &lt;&lt; endl;	system(&quot;pause&quot;);		return 0;&amp;#125;  1.2 注释123456&#x2F;&#x2F;单行注释&#x2F;*多行注释*&#x2F;  2 变量2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My C++ Learning">
+<meta property="og:url" content="http://example.com/2020/10/13/My-C-Learning/index.html">
+<meta property="og:site_name" content="L Monster の Blog">
+<meta property="og:description" content="1 初识程序1.1 Hello World12345678int main()&amp;#123;	cout &lt;&lt; &quot;hello world!!!&quot; &lt;&lt; endl;	system(&quot;pause&quot;);		return 0;&amp;#125;  1.2 注释123456&#x2F;&#x2F;单行注释&#x2F;*多行注释*&#x2F;  2 变量2">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-10-13T08:00:00.000Z">
+<meta property="article:modified_time" content="2020-10-13T07:30:47.354Z">
+<meta property="article:author" content="L">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2020/10/13/My-C-Learning/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>My C++ Learning | L Monster の Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L Monster の Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Rush!!!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/13/My-C-Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="L">
+      <meta itemprop="description" content="Oh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L Monster の Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          My C++ Learning
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-10-13 16:00:00 / Modified: 15:30:47" itemprop="dateCreated datePublished" datetime="2020-10-13T16:00:00+08:00">2020-10-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1-初识程序"><a href="#1-初识程序" class="headerlink" title="1 初识程序"></a>1 初识程序</h1><h2 id="1-1-Hello-World"><a href="#1-1-Hello-World" class="headerlink" title="1.1 Hello World"></a>1.1 Hello World</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;hello world!!!&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-注释"><a href="#1-2-注释" class="headerlink" title="1.2 注释"></a>1.2 注释</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;单行注释</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">多行</span><br><span class="line">注释</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-变量"><a href="#2-变量" class="headerlink" title="2 变量"></a>2 变量</h1><h2 id="2-1-介绍"><a href="#2-1-介绍" class="headerlink" title="2.1 介绍"></a>2.1 介绍</h2><p>变量存在的意义：方便管理内存空间</p>
+<p>变量创建的语法：数据类型  变量命 = 变量初始值;</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-常量"><a href="#2-2-常量" class="headerlink" title="2.2 常量"></a>2.2 常量</h2><p>常量的定义方式</p>
+<ul>
+<li>#define 宏常量</li>
+<li>const 修饰的变量</li>
+</ul>
+<p>//宏常量</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Day 7</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;一周共有 &quot;</span> &lt;&lt; Day &lt;&lt; <span class="string">&quot;天&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. const 修饰的变量</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> month = <span class="number">12</span>;</span><br><span class="line"><span class="comment">// month = 24;const修饰的常量</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;一年共有 &quot;</span> &lt;&lt; month &lt;&lt; <span class="string">&quot;月&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-关键字"><a href="#2-3-关键字" class="headerlink" title="2.3 关键字"></a>2.3 关键字</h2><p>创建变量： 数据类型 变量名称 = 变量初始值<br>不要用关键字给变量或者常量起名称</p>
+<h2 id="2-4-标识符"><a href="#2-4-标识符" class="headerlink" title="2.4 标识符"></a>2.4 标识符</h2><p>标识符命名规则</p>
+<ul>
+<li>不可以是关键字</li>
+<li>标识符是由字母，数字，下划线构成</li>
+<li>标识符第一个字符只能是字母或下划线</li>
+<li>标识符是区分大小写的</li>
+</ul>
+<h1 id="3-数据类型"><a href="#3-数据类型" class="headerlink" title="3 数据类型"></a>3 数据类型</h1><h2 id="3-1-大纲"><a href="#3-1-大纲" class="headerlink" title="3.1 大纲"></a>3.1 大纲</h2><table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">含义</th>
+<th align="center">最小尺寸</th>
+<th align="center">所占字节</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">bool</td>
+<td align="center">布尔类型</td>
+<td align="center">未定义</td>
+<td align="center">1字节</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">字符</td>
+<td align="center">8位</td>
+<td align="center">1字节</td>
+</tr>
+<tr>
+<td align="center">wchar_t</td>
+<td align="center">宽字符</td>
+<td align="center">16位</td>
+<td align="center">-字节</td>
+</tr>
+<tr>
+<td align="center">char_16</td>
+<td align="center">Unicode字符</td>
+<td align="center">16位</td>
+<td align="center">-字节</td>
+</tr>
+<tr>
+<td align="center">char_32</td>
+<td align="center">Unicode字符</td>
+<td align="center">32位</td>
+<td align="center">-字节</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">短整型</td>
+<td align="center">16位</td>
+<td align="center">2字节</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">整形</td>
+<td align="center">16位</td>
+<td align="center">4字节</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">长整型</td>
+<td align="center">32位</td>
+<td align="center">4字节</td>
+</tr>
+<tr>
+<td align="center">long long</td>
+<td align="center">长整型</td>
+<td align="center">64位</td>
+<td align="center">8字节</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">单精度浮点数</td>
+<td align="center">6位有效数字</td>
+<td align="center">4字节</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">双精度浮点数</td>
+<td align="center">10位有效数字</td>
+<td align="center">8字节</td>
+</tr>
+<tr>
+<td align="center">long double</td>
+<td align="center">扩展精度浮点数</td>
+<td align="center">10位有效数字</td>
+<td align="center">-字节</td>
+</tr>
+</tbody></table>
+<h2 id="3-2-整形"><a href="#3-2-整形" class="headerlink" title="3.2 整形"></a>3.2 整形</h2><table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">short</th>
+<th align="center">int</th>
+<th align="center">long</th>
+<th align="center">long long</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">含义</td>
+<td align="center">短整型</td>
+<td align="center">整形</td>
+<td align="center">长整型</td>
+<td align="center">长整型</td>
+</tr>
+<tr>
+<td align="center">有效范围</td>
+<td align="center">-2^15~2^15-1</td>
+<td align="center">-2^32~2^32-1</td>
+<td align="center">-2^32~2^32-1</td>
+<td align="center">-2^64~2^64-1</td>
+</tr>
+</tbody></table>
+<h2 id="3-3-浮点型"><a href="#3-3-浮点型" class="headerlink" title="3.3 浮点型"></a>3.3 浮点型</h2><ul>
+<li>默认情况下输出一个小数，显示6位有效数字</li>
+<li>科学计数法：float f2 = 3e2;   3*10^2;</li>
+</ul>
+<h2 id="3-4-字符型"><a href="#3-4-字符型" class="headerlink" title="3.4 字符型"></a>3.4 字符型</h2><p>字符型变量并不是把字符本身放到内存中存储，而是将相应的ASCLL编码放入到存储单元,如：<br>A – 65,<br>a – 97</p>
+<h2 id="3-5-转义字符"><a href="#3-5-转义字符" class="headerlink" title="3.5 转义字符"></a>3.5 转义字符</h2><table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">含义</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\n</td>
+<td align="center">换行符</td>
+<td align="center">换行</td>
+</tr>
+<tr>
+<td align="center">\</td>
+<td align="center">反斜杠</td>
+<td align="center">可以输出反斜杠？</td>
+</tr>
+<tr>
+<td align="center">\t</td>
+<td align="center">水平制表符</td>
+<td align="center">可以整齐的输出数据</td>
+</tr>
+</tbody></table>
+<ul>
+<li>\t:  <figure class="highlight plain"><figcaption><span><< "aa\thello world!" << endl;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; &quot;aaaa\thello world!&quot; &lt;&lt; endl;&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="3-6-字符串"><a href="#3-6-字符串" class="headerlink" title="3.6 字符串"></a>3.6 字符串</h2><ul>
+<li>C风格： <code>char str[] = &quot;hello world&quot;;</code></li>
+<li>C++风格：<code>string str2 = &quot;hello world&quot;;</code></li>
+</ul>
+<h2 id="3-7-bool类型"><a href="#3-7-bool类型" class="headerlink" title="3.7 bool类型"></a>3.7 bool类型</h2><p><code>bool flag = true;</code><br>true:1 or 其他非 0<br>flase:0</p>
+<h1 id="4-运算符"><a href="#4-运算符" class="headerlink" title="4 运算符"></a>4 运算符</h1><h2 id="4-1-总览"><a href="#4-1-总览" class="headerlink" title="4.1 总览"></a>4.1 总览</h2><ul>
+<li>算术运算符</li>
+<li>赋值运算符</li>
+<li>比较运算符</li>
+<li>逻辑运算符</li>
+</ul>
+<h2 id="4-2-算术运算符"><a href="#4-2-算术运算符" class="headerlink" title="4.2 算术运算符"></a>4.2 算术运算符</h2><ul>
+<li>加：+</li>
+<li>减：-</li>
+<li>乘：*</li>
+<li>除：/</li>
+<li>取模：%  17%3 = 2</li>
+<li>++，–：递增递减<br>前置递增：++a<br>后置递增：a++<br>前置先++在计算表达式的值，后置先计算表达式的值再++</li>
+</ul>
+<h2 id="4-3-赋值运算符"><a href="#4-3-赋值运算符" class="headerlink" title="4.3 赋值运算符"></a>4.3 赋值运算符</h2><p> =  +=  -=  *=  /=  %=</p>
+<h2 id="4-4-比较运算符"><a href="#4-4-比较运算符" class="headerlink" title="4.4 比较运算符"></a>4.4 比较运算符</h2><p>==  !=  &lt; &gt;  &lt;=  &gt;= </p>
+<h2 id="4-5-逻辑运算符"><a href="#4-5-逻辑运算符" class="headerlink" title="4.5 逻辑运算符"></a>4.5 逻辑运算符</h2><p>！  &amp;&amp;  ||</p>
+<h1 id="5-程序流程结构"><a href="#5-程序流程结构" class="headerlink" title="5 程序流程结构"></a>5 程序流程结构</h1><h2 id="5-1-总缆"><a href="#5-1-总缆" class="headerlink" title="5.1 总缆"></a>5.1 总缆</h2><ul>
+<li>顺序结构</li>
+<li>选择结构<br>// switch 缺点：判断的时候只能是整型或者字符型，不可以是一个区间<br>// swicth 优点：结构清晰，执行效率高</li>
+<li>循环结构</li>
+</ul>
+<h2 id="5-2-顺序结构"><a href="#5-2-顺序结构" class="headerlink" title="5.2 顺序结构"></a>5.2 顺序结构</h2><p>按照循序执行</p>
+<h2 id="5-3-选择结构"><a href="#5-3-选择结构" class="headerlink" title="5.3 选择结构"></a>5.3 选择结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// if else</span></span><br><span class="line"><span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="comment">// switch</span></span><br><span class="line"><span class="keyword">switch</span>()</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/13/My-New-Post/" rel="prev" title="My First Post">
+      <i class="fa fa-chevron-left"></i> My First Post
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/13/Brats/" rel="next" title="Brats">
+      Brats <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%88%9D%E8%AF%86%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">1 初识程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Hello-World"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Hello World</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E6%B3%A8%E9%87%8A"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">2 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%B8%B8%E9%87%8F"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 标识符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">3 数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%A4%A7%E7%BA%B2"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 大纲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E6%95%B4%E5%BD%A2"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 整形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E6%B5%AE%E7%82%B9%E5%9E%8B"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 浮点型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 字符型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 转义字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">3.6.</span> <span class="nav-text">3.6 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-bool%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.7.</span> <span class="nav-text">3.7 bool类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">4.</span> <span class="nav-text">4 运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E6%80%BB%E8%A7%88"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 总览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 算术运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 赋值运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 比较运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 逻辑运算符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="nav-number">5.</span> <span class="nav-text">5 程序流程结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E6%80%BB%E7%BC%86"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 总缆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 顺序结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 选择结构</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">L</p>
+  <div class="site-description" itemprop="description">Oh</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">L</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
